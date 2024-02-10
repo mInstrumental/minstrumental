@@ -17,6 +17,10 @@ header {
     color: #fff;
 }
 
+#recursosTitulo {
+    text-align: center;
+}
+
 /* CSS para ajustar el logo */
 .logo img {
     max-height: 50px;
@@ -64,7 +68,7 @@ nav ul li a:hover {
     padding: 15px 30px;
     background: linear-gradient(90deg, #007BFF, #0056b3);
     color: #fff;
-    border: none;
+    border: 2px white;
     border-radius: 10px;
     cursor: pointer;
     transition: background 0.3s ease;
@@ -368,14 +372,17 @@ footer {
     background: #1a1a1a;
 }
 
+.menu-btn {
+    display: none;
+}
+
 @media (max-width: 768px) {
-    /* Reducir el tamaño del encabezado y mostrar el menú de navegación como desplegable */
     header {
         padding: 10px;
     }
 
     .logo img {
-        max-height: 40px; /* Reducir el tamaño del logo para pantallas pequeñas */
+        display: none; /* Reducir el tamaño del logo para pantallas pequeñas */
     }
 
     nav {
@@ -407,42 +414,23 @@ footer {
         margin-top: 20px; /* Añadir margen superior al buscador */
     }
 
-    /* Nuevos estilos para mostrar solo el logo y el buscador en el encabezado */
-    nav ul, nav li {
-        display: none; /* Ocultar elementos de navegación */
+    .inicio {
+        padding: 50px 10px; /* Reducir el espacio en la parte superior e inferior del bloque */
+        flex-direction: column; /* Cambiar la dirección del flex container a columna */
+        align-items: center; /* Centrar los elementos en la dirección principal (ahora columna) */
     }
 
     .logo-block {
-        margin-right: 0; /* Eliminar margen derecho del bloque del logo */
+        margin-right: 0; /* Eliminar el margen derecho para centrar el logo en la columna */
     }
 
-    .search-bar {
-        margin-top: 10px; /* Ajustar el margen superior del buscador */
+    .logo-block img {
+        max-height: 300px; /* Restaurar el tamaño del logo para pantallas pequeñas */
     }
 
-    /* Nuevos estilos para mostrar el menú de navegación como una lista debajo del logo y el buscador */
-    nav.mobile-nav {
-        display: block;
-    }
-
-    nav.mobile-nav ul {
-        list-style: none;
-        padding: 0;
-        text-align: center;
-    }
-
-    nav.mobile-nav li {
-        margin-bottom: 10px;
-    }
-
-    nav.mobile-nav a {
-        text-decoration: none;
-        color: #fff;
-        font-size: 18px;
-        transition: color 0.3s ease;
-    }
-
-    nav.mobile-nav a:hover {
-        color: #0056b3;
+    .texto-bienvenida {
+        max-width: 100%; /* Hacer que el texto ocupe todo el ancho disponible */
+        font-size: 20px; /* Ajustar el tamaño del texto para pantallas pequeñas */
+        margin-top: 20px; /* Añadir espacio superior al texto */
     }
 }
