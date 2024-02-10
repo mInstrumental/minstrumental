@@ -19,7 +19,7 @@ header {
 
 /* CSS para ajustar el logo */
 .logo img {
-    max-height: 80px;
+    max-height: 50px;
 }
 
 /* CSS para la barra navegante */
@@ -83,12 +83,12 @@ nav ul li a:hover {
 }
 
 .logo-block {
-    margin-right: 30px;
+    margin-right: -400px; /* Puedes ajustar el margen entre el logo y el texto según tus preferencias */
 }
 
 .logo-block img {
-    max-width: 100%;
-    height: auto;
+    max-width: 50%;
+    max-height: 50%; /* Ajusta el ancho máximo de la imagen según tus necesidades */
 }
 
 .texto-bienvenida {
@@ -98,7 +98,6 @@ nav ul li a:hover {
     font-size: 28px;
     line-height: 1.5;
 }
-
 /* CSS para el carrusel de imágenes */
 .carrusel {
     padding: 50px;
@@ -369,42 +368,81 @@ footer {
     background: #1a1a1a;
 }
 
-@media screen and (max-width: 768px) {
-    /* Estilos específicos para pantallas más pequeñas */
+@media (max-width: 768px) {
+    /* Reducir el tamaño del encabezado y mostrar el menú de navegación como desplegable */
+    header {
+        padding: 10px;
+    }
 
-    /* Ejemplo: Redefine el tamaño del logo en pantallas más pequeñas */
     .logo img {
-        max-height: 50px; /* Ajusta el tamaño del logo según tus necesidades */
+        max-height: 40px; /* Reducir el tamaño del logo para pantallas pequeñas */
     }
 
-    /* Ejemplo: Cambia el tamaño del texto de bienvenida en pantallas más pequeñas */
-    .texto-bienvenida {
-        font-size: 18px; /* Ajusta el tamaño del texto según tus necesidades */
+    nav {
+        display: none; /* Ocultar la barra de navegación en pantallas pequeñas */
+        flex-direction: column;
+        align-items: center;
+        margin-top: 10px;
     }
 
-    /* Agrega más reglas específicas para pantallas pequeñas según sea necesario */
-
-    /* ... */
-
-    /* Estilos para la barra de navegación en pantallas más pequeñas */
     nav ul {
-        flex-direction: column; /* Cambia la dirección del diseño a columna */
-        align-items: center; /* Centra los elementos */
+        display: none; /* Ocultar la lista de elementos de navegación */
     }
 
-    nav ul li {
-        margin-right: 0; /* Elimina el margen derecho entre los elementos de la lista */
-        margin-bottom: 10px; /* Añade espacio entre los elementos de la lista */
+    /* Mostrar el menú desplegable al hacer clic en un botón */
+    .menu-btn {
+        display: block;
+        background: none;
+        border: none;
+        color: #fff;
+        font-size: 24px;
+        cursor: pointer;
     }
 
-    nav ul li a {
-        font-size: 16px; /* Ajusta el tamaño del texto según tus necesidades */
+    .menu-btn:focus + nav {
+        display: flex; /* Mostrar la lista de elementos de navegación al hacer clic en el botón */
     }
 
-    /* Añade más estilos o ajusta las reglas según sea necesario */
+    .search-bar {
+        margin-top: 20px; /* Añadir margen superior al buscador */
+    }
 
-    /* Ejemplo: Oculta algunas secciones en pantallas más pequeñas */
-    .elemento-oculto {
-        display: none;
+    /* Nuevos estilos para mostrar solo el logo y el buscador en el encabezado */
+    nav ul, nav li {
+        display: none; /* Ocultar elementos de navegación */
+    }
+
+    .logo-block {
+        margin-right: 0; /* Eliminar margen derecho del bloque del logo */
+    }
+
+    .search-bar {
+        margin-top: 10px; /* Ajustar el margen superior del buscador */
+    }
+
+    /* Nuevos estilos para mostrar el menú de navegación como una lista debajo del logo y el buscador */
+    nav.mobile-nav {
+        display: block;
+    }
+
+    nav.mobile-nav ul {
+        list-style: none;
+        padding: 0;
+        text-align: center;
+    }
+
+    nav.mobile-nav li {
+        margin-bottom: 10px;
+    }
+
+    nav.mobile-nav a {
+        text-decoration: none;
+        color: #fff;
+        font-size: 18px;
+        transition: color 0.3s ease;
+    }
+
+    nav.mobile-nav a:hover {
+        color: #0056b3;
     }
 }
