@@ -368,3 +368,43 @@ footer {
 ::-webkit-scrollbar-corner {
     background: #1a1a1a;
 }
+
+@media screen and (max-width: 768px) {
+    /* Estilos específicos para pantallas más pequeñas */
+
+    /* Ejemplo: Redefine el tamaño del logo en pantallas más pequeñas */
+    .logo img {
+        max-height: 50px; /* Ajusta el tamaño del logo según tus necesidades */
+    }
+
+    /* Ejemplo: Cambia el tamaño del texto de bienvenida en pantallas más pequeñas */
+    .texto-bienvenida {
+        font-size: 18px; /* Ajusta el tamaño del texto según tus necesidades */
+    }
+
+    /* Agrega más reglas específicas para pantallas pequeñas según sea necesario */
+
+    /* ... */
+
+    /* Estilos para la barra de navegación en pantallas más pequeñas */
+    nav ul {
+        flex-direction: column; /* Cambia la dirección del diseño a columna */
+        align-items: center; /* Centra los elementos */
+    }
+
+    nav ul li {
+        margin-right: 0; /* Elimina el margen derecho entre los elementos de la lista */
+        margin-bottom: 10px; /* Añade espacio entre los elementos de la lista */
+    }
+
+    nav ul li a {
+        font-size: 16px; /* Ajusta el tamaño del texto según tus necesidades */
+    }
+
+    /* Añade más estilos o ajusta las reglas según sea necesario */
+
+    /* Ejemplo: Oculta algunas secciones en pantallas más pequeñas */
+    .elemento-oculto {
+        display: none;
+    }
+}
