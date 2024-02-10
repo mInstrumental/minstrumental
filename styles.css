@@ -421,11 +421,15 @@ footer {
     }
 
     .logo-block {
-        margin-right: 0; /* Eliminar el margen derecho para centrar el logo en la columna */
+        margin-right: 0;
+        align-items: center;
+        text-align: center; /* Eliminar el margen derecho para centrar el logo en la columna */
     }
 
     .logo-block img {
-        max-height: 300px; /* Restaurar el tamaño del logo para pantallas pequeñas */
+        max-height: 300px;
+        align-items: center;
+        text-align: center; /* Restaurar el tamaño del logo para pantallas pequeñas */
     }
 
     .texto-bienvenida {
@@ -433,4 +437,28 @@ footer {
         font-size: 20px; /* Ajustar el tamaño del texto para pantallas pequeñas */
         margin-top: 20px; /* Añadir espacio superior al texto */
     }
+
+    .redes-y-sugerencias {
+        flex-direction: column-reverse; /* Cambiar la dirección del flex container a columna */
+    }
+
+    .sigueme-en-redes {
+        width: 100%;
+        margin-top: 50px; /* Asegurar que ambos elementos ocupen el ancho completo */
+    }
+
+    .sugerencias {
+        width: 100%; /* Asegurar que ambos elementos ocupen el ancho completo */
+    }
+
+    .footer-section h4 {
+        font-size: 1.5em; /* Tamaño de fuente más grande para categorías */
+        margin-bottom: 5px; /* Pequeño espacio inferior entre categorías y subcategorías */
+    }
+    
+    .footer-section p {
+        font-size: 1em; /* Tamaño de fuente normal para subcategorías */
+        margin-top: 5px; /* Pequeño espacio superior entre subcategorías */
+    }
 }
+
