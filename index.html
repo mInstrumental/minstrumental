@@ -4,8 +4,203 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>mInstrumental</title>
+    <link rel="icon" href="images/LogoMInstrumentalOscuro.PNG" type="image/x-icon">
+    <link rel="stylesheet" href="responsive.css">
+    <link rel="stylesheet" href="styles.css">
+    <!--<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>-->
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="slick-theme.css"/>
+    <link rel="stylesheet" type="text/css" href="slick.css"/>
+    <script src="slick.min.js"></script>
 </head>
 <body>
-    <h1>Hola :)</h1>
+    <!--HEADER (ENCABEZADO)-->
+    <header>
+        <div class="logo">
+            <img src="images/LogoMInstrumentalOscuro.PNG" alt="Logo mInstrumental">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#acerca-de">Acerca de</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+                <li><a href="#libreria-acordes">Librería de Acordes</a></li>
+                <li><a href="#artistas">Artistas</a></li>
+                <li><a href="#canciones">Canciones</a></li>
+                <li><a href="#partituras">Partituras</a></li>
+            </ul>
+        </nav>
+        <div class="search-bar">
+            <input type="text" placeholder="Buscar...">
+            <button type="submit">Buscar</button>
+        </div>
+    </header>
+
+    <!--BLOQUE INFORMATIVO-->
+    <section class="inicio">
+        <div class="logo-block">
+            <img src="images/LogoMInstrumentalClaro.PNG" alt="Logo mInstrumental">
+        </div>
+        <div class="texto-bienvenida">
+            <h2>mInstrumental</h2>
+            <p>Bienvenido a nuestra página web. Aquí encontrarás letras de algunas canciones, y varios artistas. Habrá librería de acordes, afinadores, pequeñas guías, etc...</p>
+        </div>
+    </section>
+
+    <!--CARRUSEL DE IMáGENES-->
+    <section class="carrusel">
+        <div class="slick-slider">
+            <div class="carrusel-item">
+                <a href="#"><img src="images/AfinarInstrumento.jpg" alt="Imagen 1"></a>
+                    <div class="caption">
+                    <h4>Afinador</h4>
+                    <p>Antes de tocar, es mejor afinar. Entra aquí para afinar tu instrumento :)!</p>
+            </div>
+        </div>
+            <div class="carrusel-item">
+                <a href="#"><img src="images/LibreriaDeAcordes.jpg" alt="Imagen 2"></a>
+                <div class="caption">
+                    <h4>Librería de Acordes</h4>
+                    <p>¿No sabes algunos acordes? ¿Quieres ver algunos variantes? Entra aquí para ver la Librería :)!</p>
+                </div>
+            </div>
+            <div class="carrusel-item">
+                <a href="#"><img src="images/InstrumentosMusicales.jpg" alt="Imagen 3"></a>
+                <div class="caption">
+                    <h4>Otros instrumentos musicales</h4>
+                    <p>Este sitio está especialmente dedicado a la Guitarra, pero puedes ver otros aquí :)</p>
+                </div>
+            </div>
+            <!-- Agrega más imágenes según sea necesario -->
+        </div>
+    </section>
+
+    <!--Bloque de donativos, próximamente-->
+    <!--<section class="donativos">
+        <h2>Apoya nuestra causa</h2>
+        <p>Tu generosa contribución nos ayuda a seguir haciendo música.</p>
+        <div class="info-bancaria">
+            <p>Realiza tu donación a través de transferencia bancaria a la siguiente cuenta:</p>
+            <p><strong>Nombre del Titular:</strong> Tu Nombre</p>
+            <p><strong>Número de Cuenta:</strong> XXXX-XXXX-XX-XXXXXXXXXX (ejemplo)</p>
+            <p><strong>IBAN:</strong> ESXX XXXX XXXX XXXX XXXX XXXX (ejemplo)</p>
+            <p><strong>Concepto:</strong> Donación para la música</p>
+        </div>
+    </section>-->
+
+    <!--Bloque de inicio de sesión-->
+    <section class="iniciar-sesion" id="iniciarSesionBlock">
+        <h2>Aún no has iniciado sesión? Hazlo ya!</h2>
+        <button id="login-button">Iniciar Sesión</button>
+        <p>Ya tienes una cuenta? <a href="#">Inicia Sesión</a></p>
+    </section>
+
+    <!--Bloque de bienvenida-->
+    <section class="ya-iniciado" id="yaIniciadoBlock">
+        <h2 id="bienvenidoMensaje">Bienvenido!</h2>
+    </section>
+
+    <!--Bloque de Contacto-->
+    <section class="redes-y-sugerencias">
+        <div class="sigueme-en-redes">
+            <h3>Sígueme en las redes:</h3>
+            <!-- Aquí puedes colocar enlaces a tus perfiles en redes sociales -->
+            <a href="#" target="_blank">Twitter</a>
+            <a href="#" target="_blank">Facebook</a>
+            <!-- Agrega más enlaces según sea necesario -->
+        </div>
+
+        <div class="sugerencias">
+            <h3>¿Alguna sugerencia? ¡Cómentala!</h3>
+            <div id="formulario-sugerencias">
+                <textarea id="sugerencia-text" placeholder="Escribe tu sugerencia aquí"></textarea>
+                <button id="enviar-sugerencia-button">Enviar Sugerencia</button>
+            </div>
+        </div>
+    </section>
+
+    <!--Pie de página-->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section about">
+                <h4>Acerca de Nosotros</h4>
+                <p>Somos mInstrumental, tu destino para explorar y aprender sobre música, acordes, artistas y más.</p>
+            </div>
+
+            <div class="footer-section contact">
+                <h4>Contacto</h4>
+                <p>Email: info@minstrumental.com</p>
+                <p>Teléfono: +1 (123) 456-7890</p>
+            </div>
+
+            <div class="footer-section quick-links">
+                <h4>Enlaces Rápidos</h4>
+                <ul>
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#">Canciones</a></li>
+                    <li><a href="#">Artistas</a></li>
+                    <li><a href="#">Partituras</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2024 mInstrumental | Todos los derechos reservados</p>
+        </div>
+    </footer>
+
+    <!--Script para el carrusel de imágenes-->
+    <script>
+        $(document).ready(function(){
+            $('.slick-slider').slick({
+                autoplay: true,
+                arrows: true,
+                dots: true,
+                infinite: true,
+                speed: 500,
+                slidesToShow: 1,
+                slidesToScroll: 1
+            });
+        });
+    </script>
+
+    <!--Script de inicios de sesión-->
+    <script>
+        // Simula el estado de inicio de sesión (puedes ajustar esto según tu implementación real)
+        var usuarioIniciado = false;
+
+        document.addEventListener("DOMContentLoaded", function() {
+            // Obtén los bloques por su ID
+            var iniciarSesionBlock = document.getElementById("iniciarSesionBlock");
+            var yaIniciadoBlock = document.getElementById("yaIniciadoBlock");
+
+            // Muestra u oculta los bloques según el estado de inicio de sesión
+            if (usuarioIniciado) {
+                iniciarSesionBlock.style.display = "none"; // Oculta el bloque de iniciar sesión
+                yaIniciadoBlock.style.display = "block";  // Muestra el bloque de usuario ya iniciado
+                // Puedes personalizar el mensaje de bienvenida con el nombre del usuario si lo tienes
+                var bienvenidoMensaje = document.getElementById("bienvenidoMensaje");
+                bienvenidoMensaje.textContent = "Bienvenido! [Nombre de usuario]";
+            } else {
+                iniciarSesionBlock.style.display = "block"; // Muestra el bloque de iniciar sesión
+                yaIniciadoBlock.style.display = "none";    // Oculta el bloque de usuario ya iniciado
+            }
+        });
+
+        // Manejo de eventos para el botón de enviar sugerencia
+        document.getElementById("enviar-sugerencia-button").addEventListener("click", function() {
+            // Obtén el texto de la sugerencia
+            var sugerenciaTexto = document.getElementById("sugerencia-text").value;
+
+            // Simula el envío de la sugerencia (puedes ajustar esto según tu implementación real)
+            console.log("Sugerencia enviada:", sugerenciaTexto);
+
+            // Limpia el área de texto después de enviar la sugerencia
+            document.getElementById("sugerencia-text").value = "";
+        });
+    </script>
 </body>
 </html>

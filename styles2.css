@@ -1,0 +1,276 @@
+/*CSS para body*/
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/*CSS para header*/
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 15px;
+    color: white;
+}
+
+/*CSS para ajustar el logo*/
+.logo img {
+    max-height: 50px;
+}
+
+/*CSS para la barra navegante*/
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+/*CSS para el buscador*/
+.search-bar {
+    display: flex;
+    margin-left: auto; /* Empuja la barra de búsqueda hacia la derecha */
+}
+
+.search-bar input {
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+    margin-right: 5px;
+}
+
+.search-bar button {
+    padding: 8px 15px;
+    background-color: #555; /* Puedes ajustar el color del botón según tus preferencias */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.inicio {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px; /* Puedes ajustar el espaciado según tus preferencias */
+}
+
+.logo-block {
+    margin-right: -400px; /* Puedes ajustar el margen entre el logo y el texto según tus preferencias */
+}
+
+.logo-block img {
+    max-width: 50%;
+    max-height: 50%; /* Ajusta el ancho máximo de la imagen según tus necesidades */
+}
+
+.texto-bienvenida {
+    max-width: 50%; /* Ajusta el ancho máximo del bloque de texto según tus necesidades */
+    max-height: 50%;
+    text-align: center; /* Centra el texto */
+}
+
+/*CSS para el carrusel de imágenes*/
+.carrusel {
+    padding: 50px;
+    z-index: 1;
+    color: black;
+}
+
+.slick-slider {
+    max-width: 800px; /* Ajusta el ancho máximo del carrusel según tus necesidades */
+    margin: 0 auto; /* Centra el carrusel en la página */
+    position: relative;
+}
+
+.slick-slider img {
+    width: 100%;
+    border-radius: 5px; /* Añade bordes redondeados a las imágenes */
+    transition: opacity 0.3s ease; /* Agrega una transición para el efecto de opacidad */
+}
+
+.carrusel-item {
+    position: relative;
+}
+
+.caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.7); 
+    padding: 10px;
+    text-align: center;
+    color: white;
+    opacity: 0; 
+    transition: opacity 0.3s ease; 
+}
+
+.carrusel-item:hover img {
+    opacity: 0.7;
+}
+
+.carrusel-item:hover .caption {
+    opacity: 1; 
+}
+
+/*CSS para las flechas del carrusel*/
+.slick-prev, .slick-next {
+    font-size: 24px;
+    color-scheme: black;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    z-index: 9999;
+    background: rgba(255, 0, 0, 0.5);
+    padding: 10px;
+}
+
+.slick-prev {
+    left: 10px;
+}
+
+.slick-next {
+    right: 10px;
+}
+
+/*CSS para donativos*/
+.donativos {
+    text-align: center;
+    padding: 50px;
+    background-color: #f2f2f2; /* Puedes ajustar el color de fondo según tus preferencias */
+}
+
+.info-bancaria {
+    margin-top: 20px;
+    border: 1px solid #ccc; /* Borde para resaltar la información bancaria */
+    padding: 10px;
+    border-radius: 5px; /* Bordes redondeados para estética */
+}
+
+/*CSS para el inicio de sesión, y texto de bienvenida*/
+.iniciar-sesion,
+.ya-iniciado {
+    text-align: center;
+    padding: 50px;
+}
+
+#login-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#bienvenidoMensaje {
+    color: green; 
+}
+
+/*CSS de contacto*/
+.redes-y-sugerencias {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    padding: 50px;
+}
+
+.sigueme-en-redes,
+.sugerencias {
+    flex: 1;
+}
+
+.sigueme-en-redes a {
+    display: block;
+    margin-top: 10px;
+    text-decoration: none;
+    color: #333; /* Color del texto de los enlaces */
+}
+
+.sugerencias {
+    flex: 1;
+    text-align: left;
+}
+
+#formulario-sugerencias {
+    margin-top: 20px;
+}
+
+#sugerencia-text {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    font-size: 16px;
+    margin-bottom: 10px;
+    height: 100px; /* Establece la altura fija */
+    resize: none; /* Evita que el usuario pueda redimensionar el textarea */
+}
+
+#enviar-sugerencia-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #4CAF50; /* Color de fondo verde, puedes ajustar según tu preferencia */
+    color: white;
+    border: none;
+    border-radius: 4px;
+}
+
+#enviar-sugerencia-button:hover {
+    background-color: #45a049; /* Cambia el color al pasar el ratón */
+}
+
+/*CSS para el pie de página*/
+footer {
+    background-color: #333;
+    color: #fff;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.footer-section {
+    flex: 1 1 300px;
+    margin: 10px;
+    text-align: center; /* Centrar el contenido */
+}
+
+.footer-section h4 {
+    color: #fff;
+    font-size: 1.2em;
+}
+
+.footer-section p {
+    margin-top: 10px;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-bottom {
+    background-color: #222;
+    padding: 10px 0;
+    text-align: center;
+    color: #fff;
+    margin-bottom: 0%; /* Asegura que el contenido no flote alrededor */
+}
