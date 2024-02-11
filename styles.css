@@ -406,12 +406,13 @@ footer {
         cursor: pointer;
     }
 
-    .menu-btn:focus + nav {
+    .menu-btn:focus + .mobile-nav {
         display: flex; /* Mostrar la lista de elementos de navegación al hacer clic en el botón */
     }
 
     .search-bar {
-        margin-top: 20px; /* Añadir margen superior al buscador */
+        align-items: center;
+        margin-top: auto; /* Añadir margen superior al buscador */
     }
 
     .inicio {
@@ -460,5 +461,15 @@ footer {
         font-size: 1em; /* Tamaño de fuente normal para subcategorías */
         margin-top: 5px; /* Pequeño espacio superior entre subcategorías */
     }
-}
 
+    .mobile-nav {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 10px;
+    }    
+
+    .mobile-nav.show-menu {
+        display: flex;
+    }
+}    
