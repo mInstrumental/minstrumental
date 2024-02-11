@@ -12,6 +12,7 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.6.7/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.6.7/firebase-auth.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -22,7 +23,7 @@
 <body>
     <!--HEADER (ENCABEZADO)-->
     <header>
-        <button class="menu-btn">&#9776;</button>
+        <button class="menu-btn" onclick="toggleMenu()">&#9776;</button>
         <div class="logo">
             <img src="images/LogoMInstrumentalOscuro.PNG" alt="Logo mInstrumental">
         </div>
@@ -35,6 +36,7 @@
                 <li><a href="#canciones">Canciones</a></li>
                 <li><a href="#partituras">Partituras</a></li>
             </ul>
+            <button class="close-btn" onclick="toggleMenu()">✕</button>
         </nav>
         <div class="search-bar">
             <input type="text" placeholder="Buscar...">
@@ -208,14 +210,19 @@
 
     <!--Script manejo de menú-->
     <script>
-        document.addEventListener("DOMContentLoaded", function () {
-                const menuBtn = document.querySelector(".menu-btn");
-                const mobileNav = document.querySelector(".mobile-nav");
-
-                menuBtn.addEventListener("click", function () {
-                mobileNav.classList.toggle("show-menu");
-            });
+    document.addEventListener("DOMContentLoaded", function () {
+        const menuBtn = document.querySelector(".menu-btn");
+        const mobileNav = document.querySelector(".mobile-nav");
+        const closeBtn = document.querySelector(".close-btn");
+    
+        menuBtn.addEventListener("click", function () {
+            mobileNav.classList.toggle("show-menu");
         });
+    
+        closeBtn.addEventListener("click", function () {
+            mobileNav.classList.remove("show-menu");
+        });
+    });
     </script>
 </body>
 </html>
