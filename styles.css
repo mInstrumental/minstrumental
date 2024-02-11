@@ -512,24 +512,31 @@ footer {
         display: block;
     }
 
-    .mobile-nav ul {
-        list-style: none;
+    .mobile-nav.show-menu ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         padding: 0;
+        width: 100%;
     }
 
-    .mobile-nav a {
+    .mobile-nav.show-menu a {
         text-decoration: none;
-        color: #000; /* Ajusta el color de los enlaces según tus preferencias */
+        color: #000;
         font-size: 18px;
-        margin: 15px 0;
         transition: color 0.3s ease;
     }
 
-    .mobile-nav a:hover {
-        color: #007BFF; /* Ajusta el color al pasar el ratón por encima según tus preferencias */
+    .mobile-nav.show-menu li {
+        margin: 15px 0;
+    }
+
+    .mobile-nav.show-menu a:hover {
+        color: #007BFF;
+        border-top: 2px solid black;
+        border-bottom: 2px solid black;
     }
 }    
-
 
 
 
